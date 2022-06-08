@@ -110,6 +110,10 @@ a{
     transition: 0.3s;
 }
 
+.button-auto-width{
+    width: auto;
+}
+
 .button:hover{
     background-image: linear-gradient(70deg, #ffce00, #ff7300);
 }
@@ -328,8 +332,80 @@ a{
 }
 
 
+/* contact box */
 
 
+.contact-image{
+    position: relative;
+}
+
+.contact-image::after{
+    content: "";
+    position: absolute;
+    background-image: url(../images/image4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -2;
+}
+
+.contact-image::before{
+    content: "";
+    position: absolute;
+    background: #0f1826;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+
+.contact-image::before, .contact-image::after{
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    width: 73%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+}
+
+
+.contact-form-box{
+    background: #fff;
+    box-shadow: 0 0 15px 0px #00000033;
+    border-radius: 25px;
+    max-width: 390px;
+    margin-top: 40%;
+    margin-bottom: 40%;
+}
+
+
+.vertical{
+    flex-direction: column;
+}
+.vertical input{
+    width: 100%;
+    margin-bottom: 0.75rem;
+    padding: 0.25rem 0;
+}
+
+
+.contact-col{
+    margin-left: -40px;
+}
+
+@media (max-width: 1200px) {
+    .contact-image::before, .contact-image::after{
+        width: 68%;
+    }
+    .contact-col{
+        margin-left: -20px;
+    }
+}
+
+@media (max-width: 992px){
+.contact-image::before, .contact-image::after {
+    width: 57%;
+}
+}
 
 @media (max-width: 767px) {
     .banner-bg::before, .banner-bg::after{
@@ -391,6 +467,24 @@ a{
         margin-top: 40%;
     }
 
+    .contact-col, .contact-form-box{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-form-box {
+        margin-bottom: 10%;
+        margin-top: 50%;
+    }
+    .copyright{
+        text-align: center;
+    }
+
+    .contact-image::before, .contact-image::after {
+        width: 95%;
+        height: 75%;
+        bottom: 25%;
+    }
 }
 
 
@@ -429,7 +523,7 @@ a{
     .left-image .white-box {
         margin-top: 50%;
     }
-    
+
 }
 
 
