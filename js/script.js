@@ -10,8 +10,15 @@ jQuery(function($){
     })
 
     $("#play").click(function () {
-        $.cookie("name", $("#fname").val());
-        window.location.href = "video.html";
+        var name = $("#fname").val();
+        if(name == ""){
+            alert("Enter your name!")
+            return false;
+        }else{
+            $.cookie("name", name);
+            window.location.href = "video.html";
+        }
+        
     });
 
     if($.cookie("name")){
