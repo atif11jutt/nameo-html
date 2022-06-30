@@ -4,8 +4,8 @@ jQuery(function($){
         $("#mobile-nav").addClass("active")
     })
 
-    $("#mobile-nav-close").click(function(e){
-        e.preventDefault();
+    $("#mobile-nav-close, #mobile-nav .nav-link").click(function(e){
+        // e.preventDefault();
         $("#mobile-nav").removeClass("active")
     })
 
