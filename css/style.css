@@ -56,7 +56,7 @@ a{
 
 .banner-bg::before, .banner-bg::after{
     border-bottom-right-radius: 50px;
-    width: calc(100% - 350px);
+    width: calc(100% - 425px);
 }
 
 
